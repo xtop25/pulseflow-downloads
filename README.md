@@ -26,6 +26,10 @@ PulseFlow is a music player for Windows. Listen to tracks from YouTube and Sound
 
 Latest version: [github.com/xtop25/pulseflow-downloads/releases](https://github.com/xtop25/pulseflow-downloads/releases)
 
+Two versions are available:
+- `PulseFlow-1.0.6-x64.exe` — **installer**: installs the app with shortcuts and includes an uninstaller (remove via Start Menu → PulseFlow → Uninstall, or Settings → Apps)
+- `PulseFlow-1.0.6-portable.exe` — **portable**: runs directly without installation
+
 ### System requirements
 
 - Windows 10 / 11 (64-bit)
@@ -56,6 +60,10 @@ PulseFlow — музыкальный плеер для Windows. Слушай т�
 ### Скачать
 
 Последняя версия: [github.com/xtop25/pulseflow-downloads/releases](https://github.com/xtop25/pulseflow-downloads/releases)
+
+Два варианта:
+- `PulseFlow-1.0.6-x64.exe` — **установщик**: ставит приложение с ярлыками и включает деинсталлятор (удаление через «Пуск» → PulseFlow → «Удалить», либо «Параметры» → «Приложения»)
+- `PulseFlow-1.0.6-portable.exe` — **портативная версия**: запускается сразу, без установки
 
 ### Системные требования
 
