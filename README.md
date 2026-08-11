@@ -1,23 +1,91 @@
 # PulseFlow
 
-Музыкальный плеер: ваш плейлист, совместные треки и публикации — в одном окне. Портативная версия, установка не нужна.
+Music platform for Windows: local library, playlists, YouTube/SoundCloud streaming, accounts and community publishing.
 
-## Скачать
+Музыкальная площадка для Windows: локальная библиотека, плейлисты, YouTube/SoundCloud стриминг, аккаунты и комьюнити-публикации.
 
-Последняя версия — в разделе [Releases](https://github.com/xtop25/pulseflow-downloads/releases) (кнопка *PulseFlow-1.0.6-portable.exe*).
+---
 
-## Запуск
+## English
 
-1. Скачай `PulseFlow-1.0.6-portable.exe`
-2. Запусти файл — приложение откроется сразу
+PulseFlow is a music player for Windows. Listen to tracks from YouTube and SoundCloud, download them, build playlists, publish tracks and playlists to the community, and keep everything in sync across devices.
 
-## Возможности
+### Features
 
-- Плейлист и очередь воспроизведения
-- Публикация треков и плейлистов (приватно/публично)
+- Search and playback of tracks from YouTube and SoundCloud
+- Download audio as MP3 (bundled yt-dlp + ffmpeg, nothing to install)
+- Playlists and favorites
+- Queue, shuffle and repeat
+- Import tracks by link
+- Accounts with server-side sync: your library and playlists are available on any device
+- Community: publish tracks and playlists (public or private), view profiles
+- Offline mode: saved settings and downloaded tracks
+- Interface languages: English, Russian, German, Spanish, French
+
+### Download
+
+Latest version: [github.com/xtop25/pulseflow-downloads/releases](https://github.com/xtop25/pulseflow-downloads/releases)
+
+### System requirements
+
+- Windows 10 / 11 (64-bit)
+- Internet connection for search and streaming
+
+### Disclaimer
+
+This project is intended for personal use. Respect the copyright of the content you listen to and download.
+
+---
+
+## Русский
+
+PulseFlow — музыкальный плеер для Windows. Слушай треки с YouTube и SoundCloud, скачивай их, собирай плейлисты, публикуй треки и плейлисты в комьюнити — всё синхронизируется между устройствами.
+
+### Возможности
+
+- Поиск и воспроизведение треков с YouTube и SoundCloud
+- Скачивание аудио в MP3 (встроенный yt-dlp + ffmpeg, ничего устанавливать не нужно)
+- Плейлисты и избранное
+- Очередь, перемешивание и повтор
 - Импорт треков по ссылке
-- Синхронизация между устройствами через ваш аккаунт
+- Аккаунты с синхронизацией на сервере: библиотека и плейлисты доступны на любом устройстве
+- Комьюнити: публикация треков и плейлистов (приватно или публично), просмотр профилей
+- Офлайн-режим: сохранённые настройки и скачанные треки
+- Языки интерфейса: русский, английский, немецкий, испанский, французский
 
-## Системные требования
+### Скачать
 
-- Windows 10/11 (x64)
+Последняя версия: [github.com/xtop25/pulseflow-downloads/releases](https://github.com/xtop25/pulseflow-downloads/releases)
+
+### Системные требования
+
+- Windows 10 / 11 (64-bit)
+- Интернет для поиска и стриминга
+
+### Отказ от ответственности
+
+Проект предназначен для личного использования. Уважай авторские права контента, который ты слушаешь и скачиваешь.
+
+---
+
+## Development / Для разработки
+
+```
+npm install        # установка зависимостей
+npm start          # запуск приложения в режиме разработки
+npm run dist       # сборка portable-версии (dist/PulseFlow-<версия>-portable.exe)
+npm run dist:nsis  # сборка инсталлятора
+npm run server     # запуск только сервера
+```
+
+### Structure / Структура
+
+- `electron/` — главный процесс Electron (окно, IPC, встроенный сервер)
+- `server/` — Express-сервер: авторизация (JWT), публикации, пользователи; данные в `%APPDATA%\PulseFlow\server-db\`
+- `renderer/` — интерфейс (HTML/CSS/JS без сборки): `js/views.js` — страницы, `js/ui.js` — компоненты, `js/i18n.js` — языки
+- `scripts/` — E2E-скрипты (запускают приложение с изолированными данными, не трогают реальные)
+
+---
+
+Исходный код закрыт и не публикуется.
+Source code is closed and not published.
